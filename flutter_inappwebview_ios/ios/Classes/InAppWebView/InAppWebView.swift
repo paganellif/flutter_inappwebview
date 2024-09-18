@@ -1429,6 +1429,8 @@ public class InAppWebView: WKWebView, UIScrollViewDelegate, WKUIDelegate,
         }
     }
     
+    // https://github.com/pichillilorenzo/flutter_inappwebview/issues/2279
+    // https://github.com/pichillilorenzo/flutter_inappwebview/issues/2278
     public override func evaluateJavaScript(_ javaScriptString: String, completionHandler: (@MainActor @Sendable (Any?, (any Error)?) -> Void)? = nil) {
         if let applePayAPIEnabled = settings?.applePayAPIEnabled, applePayAPIEnabled {
             if let completionHandler = completionHandler {
